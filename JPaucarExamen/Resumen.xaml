@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPaucarExamen.Resumen">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="Beige" Padding="14" CornerRadius="0">
+                    <Label Text="Resumen" FontSize="24" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Usuario: " FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="TxtUser" Grid.Row="0" Grid.Column="1" IsReadOnly="True"/>
+
+                    <Label Text="Nombre: " FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="TxtNombre" Grid.Row="1" Grid.Column="1" IsReadOnly="True"/>
+
+                    <Label Text="Total a pagar: " FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="TxtPagoTotal" Grid.Row="2" Grid.Column="1" IsReadOnly="True"/>
+
+                    <Button x:Name="BtnCerrar" Text="Cerrar" Clicked="BtnCerrar_Clicked" Grid.Row="3" Grid.ColumnSpan="2" />
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

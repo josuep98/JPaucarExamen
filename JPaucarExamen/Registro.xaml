@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPaucarExamen.Registro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="Beige" Padding="14" CornerRadius="0">
+                    <Label Text="Registro" FontSize="24" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="LblUser" Text="Bienvenido usuario: " FontSize="18" HorizontalTextAlignment="Start" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Nombre: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="TxtNombre" Placeholder="Nombre y apellido" Grid.Row="1" Grid.Column="1" />
+
+                    <Label Text="Monto inicial: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="TxtMonto" Placeholder="Primera cuota" Grid.Row="2" Grid.Column="1" Keyboard="Numeric" />
+
+                    <Label Text="Pago mensual: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0"/>
+                    <Entry x:Name="TxtPagoMensual" Placeholder="Pago mensual" Grid.Row="3" Grid.Column="1" IsReadOnly="True"/>
+
+                    <Button x:Name="BtnCalcularTotal" Text="Calcular pago mensual" Clicked="BtnCalcularTotal_Clicked" Grid.Row="4" Grid.ColumnSpan="2" />
+
+                    <Button x:Name="BtnGuardar" Text="Guardar" Clicked="BtnGuardar_Clicked" Grid.Row="5" Grid.ColumnSpan="2" />
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
