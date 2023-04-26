@@ -20,7 +20,8 @@
                         <ColumnDefinition Width="4*"/>
                         <ColumnDefinition Width="6*"/>
                     </Grid.ColumnDefinitions>
-
+                    
+                    <!--Detalle resumen-->
                     <Label Text="Usuario: " FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
                     <Entry x:Name="TxtUser" Grid.Row="0" Grid.Column="1" IsReadOnly="True"/>
 
